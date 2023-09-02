@@ -1,0 +1,15 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="conversation">Conversation</string>
+    <string name="edit_your_scanned_text_here">Edit your scanned text here</string>
+    <string name="typing_your_question_here">Typing your question here!</string>
+    <string name="add_your_option_here">Add your option here</string>
+    <string name="voice">Voice</string>
+    <string name="send_message">Send message</string>
+    <string name="message_view">Message View</string>
+    <string name="new_conversation">New Conversation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="take_photo">Take photo</string>
+    <string name="undo">Undo</string>
+</resources>

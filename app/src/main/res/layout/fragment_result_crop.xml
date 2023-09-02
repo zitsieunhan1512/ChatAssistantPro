@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="app.mbl.hcmute.chatApp.ui.features.scan.SharedViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:id="@+id/croppedResult"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_200dp_h"
+            android:src="@mipmap/ic_launcher_chatbot_round"
+            app:layout_constraintBottom_toTopOf="@+id/textArea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/textArea"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_0dp"
+            app:cardCornerRadius="@dimen/dimen_0dp"
+            app:cardElevation="@dimen/dimen_5dp_w"
+            app:layout_constraintBottom_toTopOf="@+id/optionalActions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/croppedResult"
+            app:strokeColor="@color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp_w">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etScannedText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_5dp_h"
+                        android:ems="10"
+                        android:hint="@string/edit_your_scanned_text_here"
+                        android:importantForAutofill="no"
+                        android:inputType="textAutoComplete|textMultiLine"
+                        android:maxLength="2000"
+                        android:minHeight="@dimen/dimen_48dp_h"
+                        android:paddingHorizontal="@dimen/dimen_10dp_h"
+                        android:textColor="@color/md_theme_primary"
+                        android:textColorHint="#757575"
+                        tools:text="Edit your scanned text here" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/optionalActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/optionalActionsArea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/optionalActionsArea"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dimen_0dp"
+            app:cardElevation="@dimen/dimen_5dp_w"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/transparent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/dimen_5dp_h"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10dp_w"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etOptionScript"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_5dp_h"
+                        android:ems="10"
+                        android:hint="@string/add_your_option_here"
+                        android:importantForAutofill="no"
+                        android:inputType="textAutoComplete|textMultiLine"
+                        android:maxLength="2000"
+                        android:maxLines="3"
+                        android:minHeight="@dimen/dimen_48dp_h"
+                        android:paddingHorizontal="@dimen/dimen_10dp_h"
+                        android:textColor="@color/md_theme_primary"
+                        android:textColorHint="#757575"
+                        tools:text="Add your option here" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnSendScanText"
+                    enableView="@{vm.isScanCompleted}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/md_theme_primary"
+                    android:contentDescription="@string/send_message"
+                    android:minWidth="@dimen/dimen_48dp_w"
+                    android:minHeight="@dimen/dimen_48dp_w"
+                    android:onClick="@{vm::onClick}"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnVoice"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/btnVoice"
+                    app:srcCompat="@drawable/ic_done" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <FrameLayout
+            android:id="@+id/commonProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/chat_background"
+            android:alpha="0.7"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            tools:visibility="gone"
+            android:elevation="@dimen/dimen_10dp_h">
+
+            <ProgressBar
+                style="@style/COMMON_PROGRESS_BAR"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dimen_56dp_h"
+                android:layout_height="@dimen/dimen_56dp_h" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

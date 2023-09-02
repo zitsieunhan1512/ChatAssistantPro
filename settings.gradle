@@ -1,0 +1,4 @@
+rootProject.name = 'Chat Gpt Assistant Pro'
+include ':app'
+include ':module:base'
+include ':module:chat'

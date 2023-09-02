@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="one_ui_button_min_width">@dimen/dimen_216dp_w</dimen>
+</resources>

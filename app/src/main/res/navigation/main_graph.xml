@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    app:startDestination="@id/firstScreenFragment">
+
+    <fragment
+        android:id="@+id/firstScreenFragment"
+        android:name="app.mbl.hcmute.chatApp.ui.firstScreen.FirstScreenFragment"
+        android:label="fragment_first_screen"
+        tools:layout="@layout/fragment_first_screen">
+        <action
+            android:id="@+id/action_firstScreenFragment_to_chatAssistantFragment"
+            app:destination="@id/chatAssistantFragment" />
+        <action
+            android:id="@+id/action_firstScreenFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatAssistantFragment"
+        android:name="app.mbl.hcmute.chatApp.ui.features.chat.ChatFragment"
+        android:label="ChatAssistantFragment"
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="scan_text"
+            app:nullable="true"
+            app:argType="string"/>
+        <argument
+            android:name="conv_id"
+            app:argType="long"/>
+        <argument
+            android:name="mess_id"
+            app:nullable="true"
+            app:argType="string"/>
+        <argument
+            android:name="start_type"
+            app:nullable="true"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="app.mbl.hcmute.chatApp.ui.features.scan.ScanFragment"
+        android:label="ScanFragment"
+        tools:layout="@layout/fragment_scan">
+        <action
+            android:id="@+id/action_scanFragment_to_cropperFragment"
+            app:destination="@id/cropperFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cropperFragment"
+        android:name="app.mbl.hcmute.chatApp.ui.features.scan.CropperFragment"
+        android:label="CropperFragment"
+        tools:layout="@layout/fragment_cropper">
+        <action
+            android:id="@+id/action_cropperFragment_to_resultCropFragment"
+            app:destination="@id/resultCropFragment" />
+        <argument
+            android:name="img_uri"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultCropFragment"
+        android:name="app.mbl.hcmute.chatApp.ui.features.scan.ResultCropFragment"
+        android:label="ResultCropFragment"
+        tools:layout="@layout/fragment_result_crop">
+        <action
+            android:id="@+id/action_resultCropFragment_to_chatAssistantFragment"
+            app:destination="@id/chatAssistantFragment"
+            app:popUpTo="@id/scanFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

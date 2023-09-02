@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="app.mbl.hcmute.chatApp.ui.features.setting.SettingFragmentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/dimen_20dp_w"
+        app:strokeColor="@android:color/transparent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_80dp_h"
+            app:cardBackgroundColor="?attr/colorBackgroundFloating"
+            app:cardCornerRadius="@dimen/dimen_0dp"
+            app:cardElevation="@dimen/dimen_3dp_h"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/dimen_10dp_h"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TEXT_STYLE_BODY1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/settings" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+            <LinearLayout
+                android:id="@+id/chatSettingArea"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/WAC_CARD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_5dp_w">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/themeSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/chatBackgroundArea">
+
+                        <TextView
+                            android:id="@+id/txtThemeTitle"
+                            style="@style/TEXT_STYLE_BODY2_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="10"
+                            android:drawablePadding="@dimen/dimen_5dp_w"
+                            android:padding="@dimen/dimen_5dp_w"
+                            android:text="@string/theme"
+                            app:drawableStartCompat="@drawable/ic_auto_mode"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="SpUsage" />
+
+                        <com.jaygoo.widget.RangeSeekBar
+                            android:id="@+id/seekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/dimen_50dp_w"
+                            android:progress="@{vm.themeValue}"
+                            app:layout_constraintTop_toBottomOf="@+id/txtThemeTitle"
+                            app:rsb_gravity="bottom"
+                            app:rsb_max="2"
+                            app:rsb_mode="single"
+                            app:rsb_progress_color="@color/md_theme_primary"
+                            app:rsb_step_auto_bonding="true"
+                            app:rsb_step_color="@color/md_theme_inversePrimary"
+                            app:rsb_step_height="10dp"
+                            app:rsb_step_radius="4dp"
+                            app:rsb_step_width="10dp"
+                            app:rsb_steps="2"
+                            app:rsb_thumb_drawable="@drawable/radio_btn_num_chk"
+                            app:rsb_tick_mark_layout_gravity="top"
+                            app:rsb_tick_mark_mode="other"
+                            app:rsb_tick_mark_text_margin="20dp" />
+
+                        <TextView
+                            style="@style/TEXT_STYLE_BODY6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_30dp_w"
+                            android:paddingBottom="@dimen/dimen_10dp_h"
+                            android:text="@string/dark_mode"
+                            app:layout_constraintStart_toStartOf="@+id/seekBar"
+                            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+                        <TextView
+                            style="@style/TEXT_STYLE_BODY6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/light_mode"
+                            app:layout_constraintEnd_toEndOf="@+id/seekBar"
+                            app:layout_constraintStart_toStartOf="@+id/seekBar"
+                            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+                        <TextView
+                            style="@style/TEXT_STYLE_BODY6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dimen_20dp_w"
+                            android:text="@string/follow_system"
+                            app:layout_constraintEnd_toEndOf="@+id/seekBar"
+                            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

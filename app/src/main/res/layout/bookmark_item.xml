@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10dp_w"
+        android:background="@color/md_theme_onPrimary"
+        app:cardCornerRadius="@dimen/dimen_8dp_w"
+        app:cardElevation="@dimen/dimen_10dp_w"
+        app:strokeColor="@color/md_theme_secondary"
+        app:strokeWidth="@dimen/dimen_2dp_w">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_2dp_w">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/imageArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dimen_5dp_w"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/md_theme_secondary"
+                app:strokeWidth="@dimen/dimen_1dp_w">
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:padding="@dimen/dimen_2dp_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="false"
+                    android:background="@color/md_theme_secondary"
+                    android:scaleType="center"
+                    tools:src="@drawable/common_button_background_blue" />
+            </com.google.android.material.card.MaterialCardView>
+
+             <com.google.android.material.textview.MaterialTextView
+                 android:id="@+id/tvTime"
+                 style="@style/TEXT_STYLE_BODY8"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:lines="1"
+                 android:padding="@dimen/dimen_5dp_h"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="1.0"
+                 app:layout_constraintStart_toEndOf="@+id/imageArea"
+                 tools:text="15:30 12-Dec" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TEXT_STYLE_BODY3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingHorizontal="@dimen/dimen_8dp_w"
+                app:layout_constraintBottom_toTopOf="@+id/tvTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageArea"
+                app:layout_constraintTop_toTopOf="@+id/imageArea"
+                tools:text="Bookmark name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

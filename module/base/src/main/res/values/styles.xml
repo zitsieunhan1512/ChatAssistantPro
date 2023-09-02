@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="COMMON_PROGRESS_BAR" parent="android:style/Widget.DeviceDefault.ProgressBar"/>
+    <style name="text_content_title">
+        <item name="android:textSize">@dimen/dimen_15sp</item>
+        <item name="android:textColor">#555555</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="SpinnerStyle" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">#F0E6DB</item>
+        <item name="android:dividerHeight">3dp</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:dropDownListViewStyle">@style/SpinnerStyle</item>
+    </style>
+
+    <style name="WAC_BUTTON">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:padding">@dimen/dimen_0dp</item> <!--    Don't remove android:padding set, keep it to avoid text cut-off on the button    -->
+        <item name="android:paddingStart">@dimen/dimen_16dp_w</item>
+        <item name="android:paddingEnd">@dimen/dimen_16dp_w</item>
+        <item name="android:paddingTop">@dimen/dimen_9dp_w</item>
+        <item name="android:paddingBottom">@dimen/dimen_9dp_w</item>
+        <item name="android:minWidth">@dimen/one_ui_button_min_width</item>
+        <item name="android:minHeight">@dimen/dimen_36dp_h</item>
+        <item name="android:background">@drawable/common_button_background_normal</item>
+        <item name="android:foreground">@drawable/common_raised_button_bg</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">#010101</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="WAC_BUTTON_NORMAL" parent="WAC_BUTTON">
+        <item name="android:background">@drawable/common_button_background_normal</item>
+    </style>
+
+    <style name="WAC_BUTTON_BLUE" parent="WAC_BUTTON">
+        <item name="android:background">@drawable/common_button_background_blue</item>
+    </style>
+
+    <!--    Begin common Wac text style-->
+
+    <!--   Main Case -->
+    <!--   + About page title -->
+    <style name="TEXT_STYLE_HEADLINE1">
+        <item name="android:textSize">@dimen/headline1_font_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Each app guide -->
+    <style name="TEXT_STYLE_HEADLINE2_1">
+        <item name="android:textSize">@dimen/headline2_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Expandable app bar main title -->
+    <style name="TEXT_STYLE_HEADLINE2_2">
+        <item name="android:textSize">@dimen/headline2_font_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Each app guide -->
+    <style name="TEXT_STYLE_HEADLINE3">
+        <item name="android:textSize">@dimen/headline3_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Action bar main title -->
+    <!--   + Search tile -->
+    <style name="TEXT_STYLE_HEADLINE4">
+        <item name="android:textSize">@dimen/headline4_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Main switch -->
+    <style name="TEXT_STYLE_HEADLINE5">
+        <item name="android:textSize">@dimen/headline5_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Dialog header -->
+    <style name="TEXT_STYLE_HEADLINE6">
+        <item name="android:textSize">@dimen/headline6_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Each app guide -->
+    <style name="TEXT_STYLE_SUBTLE1">
+        <item name="android:textSize">@dimen/subtitle1_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + List sub-header -->
+    <style name="TEXT_STYLE_SUBTLE2">
+        <item name="android:textSize">@dimen/subtitle2_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + App bar action text -->
+    <!--   + Dialog action text -->
+    <!--   + Contained button -->
+    <style name="TEXT_STYLE_BUTTON1">
+        <item name="android:textSize">@dimen/button1_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Contained button(List) -->
+    <style name="TEXT_STYLE_BUTTON2">
+        <item name="android:textSize">@dimen/button2_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Each app guide -->
+    <style name="TEXT_STYLE_BODY1">
+        <item name="android:textSize">@dimen/body1_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Drawer list selected -->
+    <style name="TEXT_STYLE_BODY2_1">
+        <item name="android:textSize">@dimen/body2_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + List main -->
+    <!--   + No item main title -->
+    <!--   + Text field hint -->
+    <style name="TEXT_STYLE_BODY2_2">
+        <item name="android:textSize">@dimen/body2_font_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + More option list -->
+    <!--   + Label toast tooltip -->
+    <style name="TEXT_STYLE_BODY3">
+        <item name="android:textSize">@dimen/body3_font_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Main tap selected -->
+    <style name="TEXT_STYLE_BODY4">
+        <item name="android:textSize">@dimen/body4_font_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Expandable app bar sub -->
+    <!--   + Label toast tooltip -->
+    <!--   + Main tab unselected -->
+    <style name="TEXT_STYLE_BODY5">
+        <item name="android:textSize">@dimen/body5_font_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Description -->
+    <!--   + Dialog description -->
+    <!--   + Chips -->
+    <style name="TEXT_STYLE_BODY6">
+        <item name="android:textSize">@dimen/body6_font_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+
+    </style>
+
+    <!--   Main Case -->
+    <!--   + List secondary -->
+    <!--   + No item body -->
+    <!--   + Drawer sub information -->
+    <style name="TEXT_STYLE_BODY7">
+        <item name="android:textSize">@dimen/body7_font_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--   Main Case -->
+    <!--   + Text field label -->
+    <style name="TEXT_STYLE_BODY8">
+        <item name="android:textSize">@dimen/body8_font_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/md_theme_primary</item>
+    </style>
+
+    <!--    End common Wac text style-->
+
+
+    <!--Card style-->
+    <style name="WAC_CARD">
+        <item name="cardElevation">@dimen/dimen_4dp_w</item>
+        <item name="cardCornerRadius">@dimen/dimen_10dp_w</item>
+        <item name="strokeColor">#00000000</item>
+        <item name="cardBackgroundColor">@color/md_theme_surfaceVariant</item>
+    </style>
+</resources>

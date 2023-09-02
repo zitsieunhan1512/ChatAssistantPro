@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginStart="@dimen/dimen_8dp_w"
+    android:layout_marginEnd="@dimen/dimen_30dp_w">
+
+    <ImageView
+        android:id="@id/messageUserAvatar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        tools:src="@color/md_theme_primary" />
+
+    <!--this view is needed for custom holder-->
+    <ImageView
+        android:id="@+id/onlineIndicator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@id/messageUserAvatar"
+        android:layout_alignEnd="@id/messageUserAvatar"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@id/bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_30dp_w"
+        android:layout_toEndOf="@id/messageUserAvatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/messageText"
+            android:minWidth="@dimen/dimen_50dp_w"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp_w"
+            android:layout_marginEnd="@dimen/dimen_4dp_w"
+            android:textIsSelectable="true"
+            tools:text="" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/messageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bubble"
+        android:layout_alignEnd="@id/bubble"
+        android:layout_marginStart="@dimen/dimen_16dp_w"
+        tools:text="12:00" />
+
+</RelativeLayout>

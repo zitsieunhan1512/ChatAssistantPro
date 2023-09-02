@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/commonProgressBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:visibility="gone"
+    tools:visibility="visible"
+    android:focusable="true">
+
+    <ProgressBar
+        style="@style/COMMON_PROGRESS_BAR"
+        android:layout_width="@dimen/dimen_60dp_w"
+        android:layout_height="@dimen/dimen_60dp_w"
+        android:layout_gravity="center" />
+</FrameLayout>

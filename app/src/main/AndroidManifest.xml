@@ -1,0 +1,44 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.mbl.hcmute.chatApp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+
+    <application
+        android:name="app.mbl.hcmute.chatApp.ui.main.MainApplication"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher_chatbot"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_chatbot_round"
+        android:supportsRtl="true"
+        android:theme="@style/SplashTheme"
+        tools:replace="android:allowBackup"
+        tools:targetApi="s">
+
+        <activity
+            android:name="app.mbl.hcmute.chatApp.ui.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Config use this page: https://developers.google.com/admob/android/quick-start#import_the_mobile_ads_sdk-->
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713. Guide: https://developers.google.com/admob/android/test-ads  -->
+        <!--            Add real your app id here-->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+    </application>
+
+</manifest>
