@@ -107,7 +107,7 @@ dependencies {
     implementation(platform(Depends.Libraries.openAiClientBOM))
     implementation(Depends.Libraries.openAiKotlin)
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     runtimeOnly(Depends.Libraries.ktor)
 
